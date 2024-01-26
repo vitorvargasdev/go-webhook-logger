@@ -16,7 +16,7 @@ const TIME_FORMAT = "20060102150405"
 func main() {
 	port := strings.Split(os.Args[1:][0], "--port=")[1]
 
-	http.HandleFunc("/webhook-response", func(w http.ResponseWriter, r *http.Request) {
+	http.HandleFunc("/listen", func(w http.ResponseWriter, r *http.Request) {
 		text := strings.Builder{}
 
 		text.WriteString("Headers:\n\n")
