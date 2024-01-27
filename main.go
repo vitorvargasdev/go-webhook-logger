@@ -7,6 +7,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"strconv"
 	"strings"
 	"time"
 )
@@ -45,7 +46,7 @@ func main() {
 
 		w.WriteHeader(http.StatusOK)
 
-		date := time.Now().Format(TIME_FORMAT)
+		date := strconv.FormatInt(time.Now().Unix(), 10)
 
 		os.WriteFile("./logs/"+date+".md", []byte(text.String()), 0644)
 	})
