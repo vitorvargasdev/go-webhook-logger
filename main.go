@@ -12,8 +12,6 @@ import (
 	"time"
 )
 
-const TIME_FORMAT = "20060102150405"
-
 func main() {
 	port := strings.Split(os.Args[1:][0], "--port=")[1]
 
