@@ -18,8 +18,8 @@ func main() {
 	http.HandleFunc("/listen", func(w http.ResponseWriter, r *http.Request) {
 		text := strings.Builder{}
 
-		text.WriteString("Headers:\n\n")
 		text.WriteString("```text\n")
+		text.WriteString("Headers:\n\n")
 
 		for k, v := range r.Header {
 			text.WriteString(k + ": " + v[0] + "\n")
